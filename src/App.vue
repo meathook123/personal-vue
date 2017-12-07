@@ -1,13 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <v-app light>
+      <v-navigation-drawer fixed
+      v-model="drawer" app>
+      </v-navigation-drawer>
+      <v-toolbar color="indigo" dark fixed app>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      </v-toolbar>
+      <v-content>
+        <v-container fluid>
+          <router-view></router-view>
+        </v-container>
+      </v-content>
+      <v-footer app></v-footer>
+    </v-app>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data: () => ({
+    drawer: null
+  })
 }
 </script>
 
