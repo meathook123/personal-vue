@@ -5,6 +5,15 @@ import Vuetify from 'vuetify'
 import App from './App'
 import router from './router'
 import 'vuetify/dist/vuetify.min.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+
+import Header from './components/Header'
+import Content from './components/Content'
+import Footer from './components/Footer'
+
+Vue.component('app-header', Header)
+Vue.component('app-content', Content)
+Vue.component('app-footer', Footer)
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
