@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'About',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'About view'
     }
   }
 }
