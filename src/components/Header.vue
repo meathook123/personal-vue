@@ -5,7 +5,7 @@
         <v-list class="pa-0">
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img src="static/profile.jpg" />
+              <img src="static/profile.jpg" >
             </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title>Ruiyang Sun</v-list-tile-title>

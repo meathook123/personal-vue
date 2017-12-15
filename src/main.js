@@ -6,6 +6,7 @@ import App from './App'
 import router from './router'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import 'font-awesome/css/font-awesome.min.css'
 
 import Header from './components/Header'
 import Content from './components/Content'
