@@ -16,7 +16,14 @@ Vue.component('app-header', Header)
 Vue.component('app-content', Content)
 Vue.component('app-footer', Footer)
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#03A9F4',
+    secondary: '#b0bec5',
+    accent: '#8c9eff',
+    error: '#b71c1c'
+  }
+})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

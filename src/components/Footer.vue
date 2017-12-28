@@ -1,52 +1,14 @@
 <template>
-  <v-footer class="darken-2" app>
-    <v-layout row wrap justify-center class="my-5">
-      <v-flex xs12 sm4>
+  <v-footer class="darken-3" color="grey" app>
+    <v-layout row wrap justify-center class="mt-3 mb-1">
+      <v-flex xs12 sm12>
         <v-card class="elevation-0 transparent">
-          <v-card-title primary-title class="layout justify-center">
-            <div class="headline">Company info</div>
-          </v-card-title>
           <v-card-text>
-            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
-            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-            Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+            <div class="mb-2">
+              <a v-for="icon in icons" :key="icon.name" class="icons" target= "_blank" :href="icon.url"><i :class="icon.class"></i></a>
+            </div>
+            &copy; Ruiyang Sun. All rights reserved.
           </v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs12 sm4 offset-sm1>
-        <v-card class="elevation-0 transparent">
-          <v-card-title primary-title class="layout justify-center">
-            <div class="headline">Contact us</div>
-          </v-card-title>
-          <v-card-text>
-            Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-          </v-card-text>
-          <v-list class="transparent">
-            <v-list-tile>
-              <v-list-tile-action>
-                <v-icon class="blue--text text--lighten-2">phone</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>777-867-5309</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile>
-              <v-list-tile-action>
-                <v-icon class="blue--text text--lighten-2">place</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>Chicago, US</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile>
-              <v-list-tile-action>
-                <v-icon class="blue--text text--lighten-2">email</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content>
-                <v-list-tile-title>john@vuetifyjs.com</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
         </v-card>
       </v-flex>
     </v-layout>
@@ -56,8 +18,12 @@
 <script>
 export default {
   name: 'Footer',
-  data () {
+  data: () => {
     return {
+      icons: [
+        { name: 'linkedin', class: 'fa fa-linkedin-square', url: 'https://www.linkedin.com/in/ruiyangsun' },
+        { name: 'github', class: 'fa fa-github-square', url: 'https://github.com/sunruiyang09' }
+      ]
     }
   }
 }
@@ -65,4 +31,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+* {
+  color: rgba(255, 255, 255, 0.6);
+}
+.icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  transition-duration: 0.5s;
+}
+
+.icons i:hover {
+  color: #2196F3;
+}
 </style>

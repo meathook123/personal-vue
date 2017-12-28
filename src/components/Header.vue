@@ -5,7 +5,7 @@
         <v-list class="pa-0">
           <v-list-tile avatar>
             <v-list-tile-avatar>
-              <img src="static/profile.jpg" >
+              <img src="static/images/profile.jpg" >
             </v-list-tile-avatar>
             <v-list-tile-content>
               <v-list-tile-title>Ruiyang Sun</v-list-tile-title>
@@ -33,8 +33,16 @@
         </v-tooltip>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="drawer"></v-toolbar-side-icon>
+    <v-toolbar color="white" fixed app>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="drawer" class="hidden-md-and-down"></v-toolbar-side-icon>
+      <v-menu offset-y class="hidden-lg-and-up">
+        <v-btn flat icon slot="activator"><v-icon>menu</v-icon></v-btn>
+        <v-list>
+          <v-list-tile v-for="nav in navs" :key="nav.title" @click="goTo(nav.path)">
+            <v-list-tile-title><v-icon>{{ nav.icon }}</v-icon>{{ nav.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-toolbar>
   </div>
 </template>
@@ -45,7 +53,7 @@ export default {
   data: () => {
     return {
       navs: [
-        { title: 'Home', icon: 'dashboard', path: '/' },
+        { title: 'Work', icon: 'dashboard', path: '/' },
         { title: 'About', icon: 'account_box', path: '/about' }
       ],
       msg: 'header',
