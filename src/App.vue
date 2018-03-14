@@ -9,7 +9,7 @@
       </div>
       
     </div>
-    <v-app class="app-animation">
+    <v-app dark class="app-animation">
       <app-header></app-header>
       <app-content></app-content>
       <app-footer></app-footer>
@@ -216,6 +216,11 @@ export default {
 	animation-fill-mode: forwards;
 }
 
+@media (max-width: 960px) {
+  nav .toolbar__content {
+    height: 60px !important;
+  }
+}
 
 @media (max-width: 600px) {
   @keyframes showupxs {

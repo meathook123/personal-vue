@@ -41,6 +41,6 @@ export default {
 }
 
 .icons i:hover {
-  color: #2196F3;
+  color: #009688;
 }
 </style>

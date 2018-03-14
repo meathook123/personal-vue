@@ -33,7 +33,7 @@
         </v-tooltip>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="white" fixed app>
+    <v-toolbar fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="drawer" class="hidden-md-and-down"></v-toolbar-side-icon>
       <v-menu offset-y class="hidden-lg-and-up">
         <v-btn flat icon slot="activator"><v-icon>menu</v-icon></v-btn>
@@ -54,6 +54,7 @@ export default {
     return {
       navs: [
         { title: 'Work', icon: 'dashboard', path: '/' },
+        { title: 'Gallery', icon: 'color_lens', path: '/gallery' },
         { title: 'About', icon: 'account_box', path: '/about' }
       ],
       msg: 'header',

@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 sm6 md4 v-for="work in works" :key="work.title">
-        <v-card class="mx-2 my-2">
+        <v-card class="mx-2 my-2 elevation-3">
           <a target= "_blank" :href="work.url"><v-card-media :src="work.img" height="200px">
           </v-card-media></a>
           <v-card-title primary-title>
@@ -11,7 +11,7 @@
             </div>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="blue" @click="openDialog(work)">Details</v-btn>
+            <v-btn flat color="teal" @click="openDialog(work)">Details</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -32,7 +32,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" flat @click.native="dialog = false">Close</v-btn>
+          <v-btn color="teal darken-1" flat @click.native="dialog = false">Close</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -64,7 +64,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.card__media {
-  border-bottom: 1px solid #ddd;
-}
 </style>
