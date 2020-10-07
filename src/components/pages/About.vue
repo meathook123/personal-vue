@@ -6,7 +6,7 @@
           <h1>About Me</h1>
           <v-card-text>
             <p class="text-xs-left">Hi! My name is Ruiyang Sun, a full-stack software engineer with extensive experience in developing web applications. I'm also interested in new technologies such as AI and blockchain and always try to learn more.</p>
-            <p class="text-xs-left">By far, I work at HoneycombData Inc. and lead the development of the web-based GUI. I am responsible for every piece of the project, from art work, front-end development, API implementation, database design, to data processing pipeline design.</p>
+            <p class="text-xs-left">By far, I'm a software engineer at Dropbox and work mostly around <a target= "_blank" href="https://dropbox.com">dropbox.com</a> and <a target= "_blank" href="https://dropbox.design">dropbox.design</a>.</p>
           </v-card-text>
         </v-card>
       </v-flex>
@@ -43,7 +43,8 @@ export default {
   data: () => {
     return {
       jobs: [
-        { company: 'HoneycombData Inc.', title: 'Software Engineer (Sep 2016 - present)' },
+        { company: 'Dropbox', title: 'Software Engineer (Aug 2019 - present)' },
+        { company: 'HoneycombData Inc.', title: 'Software Engineer (Sep 2016 - Jul 2019)' },
         { company: 'Oracle Corporation', title: 'Web Developer (May 2016 - Aug 2016)' },
         { company: 'PalmDrive Inc.', title: 'Web Developer (Jan 2016 - May 2016)' }
       ]

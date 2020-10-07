@@ -7,7 +7,7 @@
             <div class="mb-2">
               <a v-for="icon in icons" :key="icon.name" class="icons" target= "_blank" :href="icon.url"><i :class="icon.class"></i></a>
             </div>
-            &copy; Ruiyang Sun. All rights reserved.
+            <!-- &copy; Ruiyang Sun. All rights reserved. -->
           </v-card-text>
         </v-card>
       </v-flex>
